@@ -1,0 +1,21 @@
+$def with(movies)
+<h1>Show Film</h1>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Film</title>
+
+
+</head>
+<body>
+    $for movie in movies:
+        <li>
+            $movie['title'],$movie['year']
+        </li>
+
+</body>
+
+</html>

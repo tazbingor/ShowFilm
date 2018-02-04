@@ -9,14 +9,16 @@ urls = (
 
 movies = [
     {
-        'title': '西部往事',
+        'title': 'Once Upon a Time in the West',
         'year': 1968
     },
     {
-        'title': '荒野三镖客',
-        'year': 1968
+        'title': 'The Good, the Bad and the Ugly',
+        'year': 1966
     }
 ]
+
+render = web.template.render('templates/')
 
 
 class index:
@@ -27,9 +29,10 @@ class index:
 
     def GET(self):
         page = ''
-        for item in movies:
-            page += '%s(%d)\n' % (item['title'], item['year'])
-        return page
+        # for item in movies:
+        #     page += '%s(%d)\n' % (item['title'], item['year'])
+        # return page
+        return render.index(movies)
 
 
 if __name__ == '__main__':
