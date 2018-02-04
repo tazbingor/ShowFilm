@@ -1,2 +1,2 @@
-# SoFilm
-SoFilm 搜索映画.以web.py框架为基础的电影搜索工具
+# ShowFilm
+ShowFilm 秀映画,以web.py框架为基础开发的电影小站
