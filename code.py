@@ -4,7 +4,8 @@ import web
 
 # 指定url网站的匹配规则,左边是正则表达式,右边是对应处理函数的名称
 urls = (
-    '/', 'index'
+    '/', 'index',
+    '/movie/(\d+)', 'movie'
 )
 
 # movies = [
