@@ -1,7 +1,4 @@
 $def with(movies)
-<h1>Show Film</h1>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +8,11 @@ $def with(movies)
 
 </head>
 <body>
+    <h1>Show Film</h1>
+
     $for movie in movies:
         <li>
-            $movie['title'],$movie['year']
+            $movie['title'],$movie['year'],$movie['country'],$movie['abstract']
         </li>
 
 </body>

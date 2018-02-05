@@ -7,18 +7,19 @@ urls = (
     '/', 'index'
 )
 
-movies = [
-    {
-        'title': 'Once Upon a Time in the West',
-        'year': 1968
-    },
-    {
-        'title': 'The Good, the Bad and the Ugly',
-        'year': 1966
-    }
-]
+# movies = [
+#     {
+#         'title': 'Once Upon a Time in the West',
+#         'year': 1968
+#     },
+#     {
+#         'title': 'The Good, the Bad and the Ugly',
+#         'year': 1966
+#     }
+# ]
 
 render = web.template.render('templates/')
+db = web.database(dbn='sqlite', db='ShowFilm.db')
 
 
 class index:
@@ -28,10 +29,7 @@ class index:
     '''
 
     def GET(self):
-        page = ''
-        # for item in movies:
-        #     page += '%s(%d)\n' % (item['title'], item['year'])
-        # return page
+        movies = db.select('movie')
         return render.index(movies)
 
 
