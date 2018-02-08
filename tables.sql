@@ -1,16 +1,16 @@
 CREATE TABLE movie (
-  casts,
-  countries,
-  directors,
-  genres,
   id,
-  image,
-  origin,
-  rating,
-  summary,
   title,
+  origin,
   url,
-  year
+  rating,
+  image,
+  directors,
+  casts,
+  year,
+  genres,
+  countries,
+  summary
 );
 
 -- INSERT INTO movie VALUES (
