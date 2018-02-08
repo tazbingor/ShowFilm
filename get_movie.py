@@ -44,8 +44,12 @@ def add_movie(data):
 
 
 def main():
+    """
+
+    :rtype: object
+    """
     movie_ids = get_movie_ids()
-    print movie_ids
+    print movie_ids  # done
     count = 0
     for movie_id in movie_ids:
         response = urllib.urlopen('http://api.douban.com/v2/movie/subject/%s' % movie_id)
